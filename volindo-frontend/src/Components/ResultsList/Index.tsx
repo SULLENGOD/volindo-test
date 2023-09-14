@@ -34,7 +34,7 @@ export const SearchModal: React.FC<SearchModalProp> = ({
   return (
     <>
       <div
-        className=" d-flex gap-4 mt-2 mb-3 ms-3 p-3"
+        className=" d-flex gap-3 mt-2 mb-3 ms-3 p-3"
         style={{ overflowX: "auto" }}
       >
         {movies?.total_results === 0 ? (
