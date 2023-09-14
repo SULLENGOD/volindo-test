@@ -1,0 +1,31 @@
+html {
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #141414;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  scrollbar-width: thin;
+  scrollbar-color: #000 #141414;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(20, 20, 20, 1) 15%,
+    rgba(20, 20, 20, 1) 100%
+  );
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
