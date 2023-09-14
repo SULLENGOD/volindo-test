@@ -30,6 +30,7 @@ export const SearchModal: React.FC<SearchModalProp> = ({
       setMovies(null);
     }
   }, [searchString]);
+  
 
   return (
     <>

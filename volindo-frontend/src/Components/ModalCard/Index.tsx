@@ -51,11 +51,24 @@ export const ModalCard: React.FC<CardMovieProps> = ({ MovieData }) => {
         <div className="card text-bg-dark" style={cardStyle}>
           {movie && (
             <>
-              <img
+              {/* <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 className="card-img-top"
                 alt="..."
-              />
+              /> */}
+              {movie.poster_path ? (
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt=""
+                  className="card-img-top"
+                />
+              ) : (
+                <span>
+                  <h5 className="p-5 text-white border border-white rounded">
+                    Poster image not found
+                  </h5>
+                </span>
+              )}
               <div className="card-body text-center">
                 <h3 className="card-title mt-3">{movie.original_title}</h3>
                 <p className="card-text">{movie.overview}</p>

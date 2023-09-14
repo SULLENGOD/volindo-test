@@ -14,7 +14,7 @@ export const Search = () => {
     return (
         <div className='mt-5 ms-3 me-3'>
             <div className="input-group mb-3">
-            <span className="input-group-text bd-dark" id="inputGroup-sizing-default">Search:</span>
+            <span className="input-group-text text-bg-dark" id="inputGroup-sizing-default">Search:</span>
             <input
                 type="text"
                 ref={inputRef}

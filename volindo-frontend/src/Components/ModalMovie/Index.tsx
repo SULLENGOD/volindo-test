@@ -5,6 +5,7 @@ import './ModalMovie.css';
 export const ModalMovie: React.FC<CardMovieProps> = ({ MovieData, Size }) => {
   const { poster_path } = MovieData;
   const image_url = `https://image.tmdb.org/t/p/w${Size}${poster_path}`;
+
   return (
     <>
       
@@ -14,7 +15,9 @@ export const ModalMovie: React.FC<CardMovieProps> = ({ MovieData, Size }) => {
           data-bs-toggle="modal"
           data-bs-target={`#Modal-${MovieData.id}`}
         >
-          <img src={image_url} alt="" className="image-modal d-block rounded" />
+          {
+            poster_path ? <img src={image_url} alt="" className="image-modal d-block rounded" /> : <span><h5 className="p-5 text-white border border-white rounded image-modal">Poster image not found</h5></span>
+          }
         </button>
       
 
@@ -26,8 +29,8 @@ export const ModalMovie: React.FC<CardMovieProps> = ({ MovieData, Size }) => {
         aria-hidden="true"
       >
         <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header text-bg-dark">
+          <div className="modal-content border-0">
+            <div className="modal-header text-bg-dark border-0">
               <button
                 type="button"
                 className="btn-close btn-close-white"
@@ -35,7 +38,7 @@ export const ModalMovie: React.FC<CardMovieProps> = ({ MovieData, Size }) => {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="d-flex modal-body justify-content-center p-0 bg-dark rounded">
+            <div className="d-flex modal-body justify-content-center p-0 text-bg-dark rounded-bottom">
               <ModalCard MovieData={MovieData} Size={500} />
             </div>
           </div>
