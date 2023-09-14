@@ -1,5 +1,6 @@
 import { CardMovieProps } from "../CardMovie/Index";
 import { ModalCard } from "../ModalCard/Index";
+import './ModalMovie.css';
 
 export const ModalMovie: React.FC<CardMovieProps> = ({ MovieData, Size }) => {
   const { poster_path } = MovieData;
@@ -13,7 +14,7 @@ export const ModalMovie: React.FC<CardMovieProps> = ({ MovieData, Size }) => {
           data-bs-toggle="modal"
           data-bs-target={`#Modal-${MovieData.id}`}
         >
-          <img src={image_url} alt="" className="d-block rounded" />
+          <img src={image_url} alt="" className="image-modal d-block rounded" />
         </button>
       
 

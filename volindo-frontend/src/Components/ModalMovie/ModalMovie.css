@@ -1,0 +1,7 @@
+.image-modal {
+    transition: all 0.3s;
+}
+
+.image-modal:hover {
+    transform: scale(1.10);
+}
