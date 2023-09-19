@@ -22,7 +22,6 @@ export const CardMovie: React.FC<CardMovieProps> = ({ MovieData }) => {
         <h5 className="card-title">{original_title}</h5>
         <p className="card-text text-truncate ">{overview}</p>
         <p>Release Date: {release_date}</p>
-        {MovieData.id}
       </div>
     </div>
   );

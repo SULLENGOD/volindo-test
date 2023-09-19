@@ -9,3 +9,17 @@
     height: 301px;
     width: 200px;
 }
+
+.total-div {
+    position: relative;
+}
+
+.modal-header {
+    position: absolute;
+    z-index: 2;
+}
+
+.modal-body{
+    position: absolute;
+    z-index: 1;
+}
